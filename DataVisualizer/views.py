@@ -23,6 +23,9 @@ def viewcsv(request):
     if request.POST:
         global csv_name,duplicate_csv_name,csv_data, display_data
         csv_name = request.FILES["csv_file"]
+        if not csv_name.name.endswith('.csv'):
+            messages.error(request, 'Please select CSV File!')
+            return render(request,'DataVisualizer/index.html')
         csv_data = pd.read_csv(csv_name)
         csv_name.seek(0)
         display_data = pd.read_csv(csv_name, nrows=5)
