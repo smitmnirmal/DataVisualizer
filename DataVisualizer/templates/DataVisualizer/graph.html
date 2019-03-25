@@ -46,7 +46,7 @@
     <div class="col-md-4">
     <p>Select value for X axis</p>
     {% for c in column_name %}
-    <input name="xaxis"  class="form-check-input" type="radio" value={{forloop.counter}}>
+    <input name="xaxis" required class="form-check-input" type="radio" value={{forloop.counter}}>
     {{c}}
     </input><br>
     {% endfor %}
@@ -54,7 +54,7 @@
     <div class="col-md-4">
     <p>Select value for Y axis</p>
     {% for c in column_name %}
-    <input name="yaxis"  class="form-check-input" type="radio" value={{forloop.counter}}>
+    <input name="yaxis" required class="form-check-input" type="radio" value={{forloop.counter}}>
     {{c}}
     </input><br>
     {% endfor %}
@@ -62,7 +62,7 @@
     <div class="col-md-4">
     <p>Select unique column</p>
     {% for c in column_name %}
-    <input name="unique"  class="form-check-input" type="radio" value={{forloop.counter}}>
+    <input name="unique" class="form-check-input" type="radio" value={{forloop.counter}}>
     {{c}}
     </input><br>
     {% endfor %}
